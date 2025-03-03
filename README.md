@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This repository contains my attempt to modify Dr. Suvra Pal's Unified Mixture Cure Model (UMCM) to integrate the predictive capabilities of decision trees in determining the cure rate. The UMCM is a mixture cure model designed to handle multiple competing risks, providing a robust framework for survival analysis in biomedical and clinical research.
+This repository contains my attempt to modify Dr. Suvra Pal's Unified Mixture Cure Model (UMCM) to integrate the predictive capabilities of decision trees in determining the cure rate. The UMCM is a mixture cure model designed to handle multiple competing risks, providing a new framework for survival analysis in biomedical and clinical research.
 
-My approach focuses on leveraging decision trees to estimate the cure fraction, aiming to improve the model's adaptability to complex, high-dimensional datasets. By incorporating machine learning techniques, I seek to enhance the model’s predictive accuracy and interpretability when analyzing survival outcomes.
+My approach focuses on using decision trees to estimate the cure fraction, with the aim to improve the model's adaptability to complex, high-dimensional datasets. I seek to enhance the model’s predictive accuracy and interpretability when analyzing survival outcomes.
 
 ## Motivation
 
@@ -12,13 +12,18 @@ Survival analysis in biomedical research often involves patients who are "cured,
 
 ## Key Components
 
-Preprocessing Pipeline: Standardized methods for handling survival data, including feature selection and transformation.
+* Data Exploration: Visualization of key dataset characteristics, ensuring meaningful feature extraction.
 
-Data Exploration: Visualization of key dataset characteristics, ensuring meaningful feature extraction.
+* Model Integration: Modification of the UMCM to include decision tree-based predictions for the cure rate parameter.
 
-Model Integration: Modification of the UMCM to include decision tree-based predictions for the cure rate parameter.
+* Performance Evaluation: Assessment of model accuracy and robustness using real and simulated datasets.
 
-Performance Evaluation: Assessment of model accuracy and robustness using real and simulated datasets.
+## Data
+
+* Data:
+  * Type: TXT
+    * Input: One TXT file (Brstdata.txt) containing information on patient race, cancer type, cause of death, and right censorship indicatior
+  * Target Variable: Cause of Death = Breast Cancer
 
 ## Methodology
 
