@@ -18,31 +18,51 @@ Survival analysis in biomedical research often involves patients who are "cured,
 
 * Performance Evaluation: Assessment of model accuracy and robustness using real and simulated datasets.
 
-## Data
-
-Data:
-  * Type: TXT, CSV
-    * Input: One TXT file (Brstdata.txt) containing information on patient race, cancer type, months survived, cause of death, and right censorship indicatior
-    * Input (Visualizations): One CSV file (Brstdata_Distant_5064.csv) containing the above information
-  * Target Variable: Cause of Death = Breast Cancer
-
 ## Methodology
 
 1. Exploratory Data Analysis
 
-Visualization of survival distributions and covariate relationships.
+Data Visualizations:
 
-Initial estimations of cure rates using traditional methods
+![image](https://github.com/user-attachments/assets/071c8743-034a-4b9f-9c8c-d03bca013df8)
+"Alive" patients are right-censored. The probability of belonging to a cured or uncured group must be estimated.
 
-1. Data Preprocessing
+Initial estimations of cure rates using traditional methods:
 
-Transforming features for optimal model performance.
+Kaplan-Meier estimations by patient race:
+![image](https://github.com/user-attachments/assets/ce4d284f-61e4-463d-8f8a-77bba4f347a6)
 
-3. Integration of Decision Trees in the M-Step
+Kaplan-Meier survival estimations by cancer type:
+![image](https://github.com/user-attachments/assets/f7bfdbf0-9ed6-41bb-b6a0-65a0c6739c29)
 
-Utilizing regression trees to model the cure rate within the EM algorithm framework.
+Survival probabilities estimated by the kaplan-meier curves do not appear to be approaching 0 as time increases, indicating the presence of a cured population.
+Results of the KM curves at time = 90 months will serve as initial estimates for cure rate for the respective patient groups.
 
-Comparing traditional and tree-based estimation approaches.
+![image](https://github.com/user-attachments/assets/23ca3564-f6e7-4a93-b85c-64ebeffc184a)
+Initial guess for the overall cure rate: 0.28904936549925275
+
+
+2. Data
+  * Type: TXT, CSV
+    * Input: One TXT file (Brstdata.txt) containing information on patient race, cancer type, months survived, cause of death, and right censorship indicatior (D)
+    * Input (Visualizations): One CSV file (Brstdata_Distant_5064.csv) containing the above information
+  * Target Variable: Cause of Death = Breast Cancer
+  * 
+The data used in this project is a subset of the SEER breast cancer dataset:
+![image](https://github.com/user-attachments/assets/fae46cc2-8acb-4319-a8a7-494cf1159d81)
+
+Patient race = white if race_black and race_asian = 0
+Cancer type = Luminal_A if all other cancer types = 0
+
+
+3. Integration of Decision Trees in the M-Step (WIP)
+
+Tree to model the cure rate within the EM algorithm framework.
+![image](https://github.com/user-attachments/assets/51166f6f-1120-46bf-bc45-e0ddb6b632aa)
+Using estimated cured probability in calculating the weight for the cured group.
+Iterates until convergence.
+
+Comparing traditional and tree-based estimation approaches. (WIP)
 
 ## Future Directions
 
