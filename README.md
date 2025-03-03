@@ -20,9 +20,10 @@ Survival analysis in biomedical research often involves patients who are "cured,
 
 ## Data
 
-* Data:
-  * Type: TXT
-    * Input: One TXT file (Brstdata.txt) containing information on patient race, cancer type, cause of death, and right censorship indicatior
+Data:
+  * Type: TXT, CSV
+    * Input: One TXT file (Brstdata.txt) containing information on patient race, cancer type, months survived, cause of death, and right censorship indicatior
+    * Input (Visualizations): One CSV file (Brstdata_Distant_5064.csv) containing the above information
   * Target Variable: Cause of Death = Breast Cancer
 
 ## Methodology
