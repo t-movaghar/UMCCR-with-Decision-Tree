@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository contains my attempt to modify Dr. Suvra Pal's Unified Mixture Cure Model (UMCM) to integrate the predictive capabilities of decision trees in determining the cure rate. The UMCM is a mixture cure model designed to handle multiple competing risks, providing a new framework for survival analysis in biomedical and clinical research.
+This repository contains my attempt to modify Dr. Suvra Pal's Unified Mixture Cure Model (UMCCR) to integrate the predictive capabilities of decision trees in determining the cure rate. The UMCCR is a mixture cure model designed to handle multiple competing risks, providing a new framework for survival analysis in biomedical and clinical research.
 
 My approach focuses on using decision trees to estimate the cure fraction, with the aim to improve the model's adaptability to complex, high-dimensional datasets. I seek to enhance the model’s predictive accuracy and interpretability when analyzing survival outcomes.
 
